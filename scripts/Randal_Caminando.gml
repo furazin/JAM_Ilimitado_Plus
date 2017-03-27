@@ -10,6 +10,7 @@ switch(dir) {
         break;
     case "derecha" :
         sprite_index = Randal_Andar_Derecha_SPR;
+        Mover_Derecha();
         break;   
     case "parado":
         sprite_index = Randal_Quieto_SPR;
