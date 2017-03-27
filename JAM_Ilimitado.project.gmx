@@ -200,6 +200,7 @@
     <objects name="Menu_Inicio">
       <object>objects\flecha_OBJ</object>
       <object>objects\Titulo_OBJ</object>
+      <object>objects\musica_titulo</object>
     </objects>
   </objects>
   <timelines name="timelines">
