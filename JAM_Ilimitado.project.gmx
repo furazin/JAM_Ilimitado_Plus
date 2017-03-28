@@ -170,6 +170,7 @@
       <object>objects\Cerveza_OBJ</object>
       <object>objects\Hacha_OBJ</object>
       <object>objects\Ca_a_OBJ</object>
+      <object>objects\Coche_OBJ</object>
     </objects>
     <object>objects\Aerosol_HUD_OBJ</object>
     <objects name="Escenario">
@@ -189,7 +190,6 @@
       <object>objects\Arbol_Delante_OBJ</object>
       <object>objects\Arbol_Detras_OBJ</object>
       <object>objects\Cocina_OBJ</object>
-      <object>objects\Coche_OBJ</object>
       <object>objects\Tender_OBJ</object>
       <object>objects\Almacen_OBJ</object>
       <object>objects\Mesa_OBJ</object>

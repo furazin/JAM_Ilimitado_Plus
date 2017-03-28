@@ -185,32 +185,7 @@ vh = 0; // velocidad horizontal
 v = 4; //  pixeles por fotograma
 depth = -y;
 
-// HUD Jabón
-if (distance_to_object(Jabon_OBJ)&lt;10 and !Jabon_OBJ.coger) {  
 
-    Jabon_HUD_OBJ.visible = true;    
-}
-else {
-    Jabon_HUD_OBJ.visible = false;
-}
-
-// HUD Escopeta
-if (distance_to_object(escopeta_OBJ)&lt; 10 and !escopeta_OBJ.coger) {  
-
-    Escopeta_HUD_OBJ.visible = true; 
-}
-else {
-    Escopeta_HUD_OBJ.visible = false;
-}
-
-// HUD Aerosol
-if (distance_to_object(Aerosol_OBJ)&lt; 10 and !Aerosol_OBJ.coger) {  
-
-    Aerosol_HUD_OBJ.visible = true; 
-}
-else {
-    Aerosol_HUD_OBJ.visible = false;
-}
 
 
 </string>

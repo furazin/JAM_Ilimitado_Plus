@@ -27,12 +27,13 @@
             <kind>1</kind>
             <string>/// Inicializar
 coger = false; // Variable que controla si se coge o no la escopeta
+encontrado = false; // Variable para decirle al coche que el protagonista ha encontrado el inhalador
 
-mostrar_texto = true;
+mostrar_texto = false;
 
-depth = -1000;
 
-show_text = 0;
+
+
 
 
 
@@ -61,6 +62,7 @@ show_text = 0;
             <string>if(coger) {
     x = Protagonista_OBJ.x + 30;
     y = Protagonista_OBJ.y - 110;
+    depth = -1000; // Hacerlo visible delante del protagonista
 } else
 if (distance_to_object(Randal_OBJ) &lt; 8 and distance_to_object(Casa_OBJ) &lt; 8 and y &gt; Protagonista_OBJ.y - 50) {
     Randal_OBJ.estado = estados_Randal.muerto;
@@ -68,12 +70,12 @@ if (distance_to_object(Randal_OBJ) &lt; 8 and distance_to_object(Casa_OBJ) &lt; 
 }
 
 // Texto Hover
-if (place_meeting(x,y,Protagonista_OBJ)) {
-    show_text = 1;
-}
-else {
-    show_text = 0;
-}
+//if (place_meeting(x,y,Protagonista_OBJ) and !coger) {
+  //  mostrar_texto = true;
+//}
+//else {
+  //  mostrar_texto = false;
+//}
 
 </string>
           </argument>
@@ -99,11 +101,11 @@ else {
             <kind>1</kind>
             <string>draw_self(); // Tenemos que llamar a que se dibuje el objeto, ya que estamos sobreescibiendo el metodo Dibujar
 
-if (show_text == 1) {
+if (mostrar_texto == true) {
     draw_set_color(c_black);
     draw_set_font(dialogo_FNT);
     draw_set_halign(fa_left);
-    draw_text(x + 64,y - 64, "Abrir coche.#(Pulsa Z)");
+    draw_text(x + 34,y - 64, "Aerosol#(Pulsa Z)");
 }
 </string>
           </argument>
@@ -134,6 +136,7 @@ if (show_text == 1) {
     audio_play_sound(soltar_objeto, 10, false);
 } else 
     if (distance_to_object(Protagonista_OBJ)&lt;3) { 
+        encontrado = true;
         coger = true;
         mostrar_texto = false;            
         audio_play_sound(coger_objeto, 10, false);
