@@ -87,7 +87,7 @@ if (mostrar_texto == true) {
     draw_set_color(c_black);
     draw_set_font(dialogo_FNT);
     draw_set_halign(fa_left);
-    draw_text(x + 500,y - 120, "Parece que hay algo# en el maletero...#(Pulsa Z)");
+    draw_text(x + 500,y - 120, "Parece que hay algo#en el maletero...#(Pulsa Z)");
 }
 </string>
           </argument>

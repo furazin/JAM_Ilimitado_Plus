@@ -57,9 +57,6 @@
       <sprite>sprites\Ca_a_SPR</sprite>
     </sprites>
     <sprites name="HUD">
-      <sprite>sprites\Jabon_HUD</sprite>
-      <sprite>sprites\Escopeta_HUD</sprite>
-      <sprite>sprites\Aerosol_HUD</sprite>
       <sprite>sprites\creditos</sprite>
     </sprites>
     <sprites name="Escenario">
@@ -172,7 +169,6 @@
       <object>objects\Ca_a_OBJ</object>
       <object>objects\Coche_OBJ</object>
     </objects>
-    <object>objects\Aerosol_HUD_OBJ</object>
     <objects name="Escenario">
       <object>objects\Suelo_OBJ</object>
       <object>objects\Nube_Mediana_Normal_OBJ</object>
@@ -195,8 +191,6 @@
       <object>objects\Mesa_OBJ</object>
       <object>objects\Cama_OBJ</object>
     </objects>
-    <object>objects\Jabon_HUD_OBJ</object>
-    <object>objects\Escopeta_HUD_OBJ</object>
     <object>objects\creditos_OBJ</object>
     <objects name="Menu_Inicio">
       <object>objects\flecha_OBJ</object>
