@@ -74,7 +74,7 @@ if (distance_to_object(Randal_OBJ) &lt; 8 and distance_to_object(Casa_OBJ) &lt; 
   //  mostrar_texto = true;
 //}
 //else {
-  //  mostrar_texto = false;
+ //   mostrar_texto = false;
 //}
 
 </string>
@@ -136,7 +136,7 @@ if (mostrar_texto == true) {
     audio_play_sound(soltar_objeto, 10, false);
 } else 
     if (distance_to_object(Protagonista_OBJ)&lt;3) { 
-        encontrado = true;
+        encontrado = true; // Variable para notificar al coche que se ha encontrado eñ inhalador
         coger = true;
         mostrar_texto = false;            
         audio_play_sound(coger_objeto, 10, false);

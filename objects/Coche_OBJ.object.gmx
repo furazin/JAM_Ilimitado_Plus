@@ -52,12 +52,13 @@ mostrar_texto = false;
           <argument>
             <kind>1</kind>
             <string>// Comprobar que el inhalador se ha cogido o no
-if (!Aerosol_OBJ.coger == true and !Aerosol_OBJ.encontrado and place_meeting(x,y,Protagonista_OBJ)) {
-    mostrar_texto = true;   
-}
-else 
-    if (Aerosol_OBJ.encontrado)
+if (Aerosol_OBJ.coger || !place_meeting(x,y,Protagonista_OBJ) || Aerosol_OBJ.encontrado) {
         mostrar_texto = false;
+}
+else {
+    if(!Aerosol_OBJ.coger and place_meeting(x,y,Protagonista_OBJ)) 
+        mostrar_texto = true; 
+}
 </string>
           </argument>
         </arguments>
