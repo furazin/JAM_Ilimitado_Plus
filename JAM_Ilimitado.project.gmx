@@ -149,6 +149,7 @@
   <fonts name="fonts">
     <font>fonts\Pistola_Fuente</font>
     <font>fonts\Menu_FNT</font>
+    <font>fonts\dialogo_FNT</font>
   </fonts>
   <objects name="objects">
     <object>objects\Pared_OBJ</object>
