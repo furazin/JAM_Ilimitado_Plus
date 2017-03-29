@@ -55,7 +55,7 @@ randal = false;
           <argument>
             <kind>1</kind>
             <string>if(coger) {
-    x = Randal_OBJ.x + 30;
+    x = Randal_OBJ.x + 50;
     y = Randal_OBJ.y - 110;
 } if(coger_chulu) {
     x = Choru_OBJ.x + 30;

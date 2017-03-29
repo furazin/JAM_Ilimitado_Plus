@@ -201,6 +201,7 @@
     <timeline>timelines\timeline_asesino</timeline>
     <timeline>timelines\timeline_choru</timeline>
     <timeline>timelines\timeline_oso</timeline>
+    <timeline>timelines\timeline_escopeta</timeline>
   </timelines>
   <rooms name="rooms">
     <room>rooms\Menu_Inicial</room>

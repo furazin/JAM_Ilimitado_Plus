@@ -44,6 +44,9 @@ dir = "parado" // Variable de direccion que tiene por defecto "parado"
 estado = estados_jugador.parado // estado por defecto del prota
 //salida = -1; // por defecto no aparecemos sobre una salida
 
+// Instanciar al oso cuando Choru vaya a mear
+alarm[0] = 5000;
+
 
 </string>
           </argument>

@@ -61,7 +61,7 @@ depth = -y;
           <argument>
             <kind>1</kind>
             <string>if(coger) {
-    x = Protagonista_OBJ.x + 30;
+    x = Protagonista_OBJ.x + 50;
     y = Protagonista_OBJ.y - 110;
 } else
 if (distance_to_object(Randal_OBJ) &lt; 8 and Jabon_OBJ.x &lt; 1440 and y &gt; Protagonista_OBJ.y - 50) {
@@ -122,14 +122,14 @@ if (mostrar_texto_fregar == true) {
     draw_set_color(c_white);
     draw_set_font(dialogo_FNT);
     draw_set_halign(fa_left);
-    draw_text(x + 34,y - 64, "Usar jabon para#lavar los platos#(Pulsa X)");
+    draw_text(x + 34,y - 64, "Usar jabon para#lavar los platos#(X)");
 }
 
 if (mostrar_texto_coger == true) {
     draw_set_color(c_black); 
     draw_set_font(dialogo_FNT);
     //draw_set_halign(fa_left);
-    draw_text(x + 24,y - 60, "Jabon#(Pulsa Z)");
+    draw_text(x + 24,y - 60, "Jabon#(Z)");
 }
 
 </string>

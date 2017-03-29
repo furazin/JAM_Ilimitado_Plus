@@ -31,6 +31,15 @@ coger = false; // Variable que controla si se coge o no la escopeta
 mostrar_texto = false;
 mostrar_texto_disparar = false;
 
+disparar_oso = false; // Variable para unicamente permitir que se dispare al oso tras pasar cierto tiempo
+
+// Timeline
+timeline_index = timeline_escopeta;
+timeline_position = 0;
+timeline_running = true;
+timeline_loop = false;
+
+
 
 
 
@@ -96,13 +105,13 @@ if (mostrar_texto == true) {
     draw_set_color(c_black);
     draw_set_font(dialogo_FNT);
     draw_set_halign(fa_left);
-    draw_text(x + 34,y - 64, "Escopeta#(Pulsa Z)");
+    draw_text(x + 34,y - 64, "Escopeta#(Z)");
 }
 if (mostrar_texto_disparar == true) {
     draw_set_color(c_black);
     draw_set_font(dialogo_FNT);
     draw_set_halign(fa_left);
-    draw_text(x + 34,y - 64, "Disparar#(Pulsa X)");
+    draw_text(x + 34,y - 64, "Disparar#(X)");
 }
 </string>
           </argument>
@@ -163,7 +172,8 @@ if (mostrar_texto_disparar == true) {
           <argument>
             <kind>1</kind>
             <string>/// Disparo tras pulsar la tecla X y estar cerca
-if (distance_to_object(Oso_OBJ)&lt;300 and coger = true) {
+
+if (distance_to_object(Oso_OBJ)&lt;300 and coger and disparar_oso) {
     Oso_OBJ.estado = estados_Oso.muerto;
     Oso_OBJ.dir = "muerte";
     if(!audio_is_playing(escopeta)) audio_play_sound(escopeta, 10, false);

@@ -29,8 +29,9 @@
 coger = false; // Variable que controla si se coge o no la escopeta
 encontrado = false; // Variable para decirle al coche que el protagonista ha encontrado el inhalador
 
-mostrar_texto = false;
+mostrar_texto_soltado = false;
 mostrar_texto_salvarRandal = false;
+mostrar_texto_cogido = false;
 
 
 
@@ -61,7 +62,7 @@ mostrar_texto_salvarRandal = false;
           <argument>
             <kind>1</kind>
             <string>if(coger) {
-    x = Protagonista_OBJ.x + 30;
+    x = Protagonista_OBJ.x + 50;
     y = Protagonista_OBJ.y - 110;
     depth = -1000; // Hacerlo visible delante del protagonista
 } else
@@ -73,19 +74,25 @@ if (distance_to_object(Randal_OBJ) &lt; 8 and distance_to_object(Casa_OBJ) &lt; 
 // Texto Hover
 if (place_meeting(x,y,Protagonista_OBJ) and !coger) {
     mostrar_texto_salvarRandal = false;
-    mostrar_texto = true;
+    mostrar_texto_soltado = true;
     if (Aerosol_OBJ.y &lt; Protagonista_OBJ.y)
-        mostrar_texto = false;
+        mostrar_texto_soltado = false;
     
 }
 else 
-    mostrar_texto = false;
+    mostrar_texto_soltado = false;
 
 if (place_meeting(x,y,Randal_OBJ) and coger and Randal_OBJ.dir == "asfixia") 
     mostrar_texto_salvarRandal = true;
 else 
     if (!Randal_OBJ.dir == "asfixia")
         mostrar_texto_salvarRandal = false;
+        
+if (encontrado and coger and place_meeting(x,y,Protagonista_OBJ)) {
+    mostrar_texto_cogido = true;
+}
+else
+    mostrar_texto_cogido = false;
         
             
 
@@ -115,18 +122,25 @@ else
             <kind>1</kind>
             <string>draw_self(); // Tenemos que llamar a que se dibuje el objeto, ya que estamos sobreescibiendo el metodo Dibujar
 
-if (mostrar_texto == true) {
+if (mostrar_texto_soltado == true) {
     draw_set_color(c_black);
     draw_set_font(dialogo_FNT);
     draw_set_halign(fa_left);
-    draw_text(x + 34,y - 64, "Inhalador#(Pulsa Z)");
+    draw_text(x + 34,y - 64, "Inhalador#(Z)");
 }
 
 if (mostrar_texto_salvarRandal == true) {
     draw_set_color(c_black);
     draw_set_font(dialogo_FNT);
     draw_set_halign(fa_left);
-    draw_text(x - 100,y - 24, "Dar#Inhalador#(Pulsa X)");
+    draw_text(x - 110,y - 24, "Dar#Inhalador#(X)");
+}
+
+if (mostrar_texto_cogido and !mostrar_texto_salvarRandal) {
+    draw_set_color(c_black);
+    draw_set_font(dialogo_FNT);
+    draw_set_halign(fa_left);
+    draw_text(x + 28,y - 64, "Soltar#(Z)");
 }
 </string>
           </argument>
@@ -152,7 +166,7 @@ if (mostrar_texto_salvarRandal == true) {
             <kind>1</kind>
             <string>if(coger) {
     coger = false;    
-    y = y + 110;    
+    y = y + 110;   
     mostrar_texto = true;
     audio_play_sound(soltar_objeto, 10, false);
 } else 

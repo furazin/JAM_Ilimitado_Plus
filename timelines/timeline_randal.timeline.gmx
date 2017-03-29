@@ -92,7 +92,7 @@ if(!muerto){
     </event>
   </entry>
   <entry>
-    <step>2300</step>
+    <step>2290</step>
     <event>
       <action>
         <libid>1</libid>

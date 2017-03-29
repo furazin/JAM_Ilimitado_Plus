@@ -203,7 +203,7 @@ if (mostrar_texto_cerveza) {
     draw_set_font(dialogo_FNT);
     draw_set_halign(fa_left);
     //draw_text(x + 150,y - 200, "Me apetece#una birra");
-    draw_text_transformed(x + 100, y - 200, "Me apetece#una birra", 1.2, 1.2, image_angle);
+    draw_text_transformed(x + 80, y - 200, "Me apetece#una birra", 1.2, 1.2, image_angle);
 }
 </string>
           </argument>

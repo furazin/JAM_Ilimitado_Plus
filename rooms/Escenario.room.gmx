@@ -100,7 +100,6 @@
     <instance objName="Tender_OBJ" x="1504" y="992" name="inst_7FF91744" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="Arbol_Delante_OBJ" x="4000" y="992" name="inst_61166F0B" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="Choru_OBJ" x="3712" y="992" name="inst_BD500DEF" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="Oso_OBJ" x="3200" y="992" name="inst_0E618CD0" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="Cama_OBJ" x="192" y="1024" name="inst_08284123" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="Asesino_OBJ" x="4256" y="992" name="inst_305817F6" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="Almacen_OBJ" x="2144" y="992" name="inst_16DDE940" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
@@ -128,6 +127,8 @@
     <instance objName="Nube_Chica_Normal_OBJ" x="4096" y="288" name="inst_25068FBA" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="Nube_Mediana_Oscura_OBJ" x="4736" y="288" name="inst_BA5332B4" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="Arbol_Detras_OBJ" x="4128" y="992" name="inst_FBC82E62" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="Oso_OBJ" x="3200" y="992" name="inst_86A04F28" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="Arbol_Delante_OBJ" x="3040" y="992" name="inst_0005A5A1" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles>
     <tile bgName="" x="448" y="1056" w="16" h="16" xo="0" yo="0" id="10000006" name="inst_5114C7F1" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
