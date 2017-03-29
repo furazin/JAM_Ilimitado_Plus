@@ -188,7 +188,7 @@ if (mostrar_texto_asfixia) {
     draw_set_font(dialogo_FNT);
     draw_set_halign(fa_right);
     //draw_text(x + 80,y - 195, "¡Socorro!#¡Me asfixio!");
-    draw_text_transformed(x + 80, y - 200, "¡Socorro!#¡Me asfixio!", 1.5, 1.5, image_angle);
+    draw_text_transformed(x + 90, y - 200, "¡Socorro!#¡Me asfixio!", 1.5, 1.5, image_angle);
 }
 </string>
           </argument>

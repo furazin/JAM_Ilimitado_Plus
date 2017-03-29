@@ -30,6 +30,7 @@ coger = false; // Variable que controla si se coge o no la escopeta
 encontrado = false; // Variable para decirle al coche que el protagonista ha encontrado el inhalador
 
 mostrar_texto = false;
+mostrar_texto_salvarRandal = false;
 
 
 
@@ -71,16 +72,24 @@ if (distance_to_object(Randal_OBJ) &lt; 8 and distance_to_object(Casa_OBJ) &lt; 
 
 // Texto Hover
 if (place_meeting(x,y,Protagonista_OBJ) and !coger) {
-    show_debug_message(Aerosol_OBJ.y);
-    show_debug_message(Protagonista_OBJ.y);
+    mostrar_texto_salvarRandal = false;
     mostrar_texto = true;
     if (Aerosol_OBJ.y &lt; Protagonista_OBJ.y)
         mostrar_texto = false;
     
 }
-else {
+else 
     mostrar_texto = false;
-}
+
+if (place_meeting(x,y,Randal_OBJ) and coger and Randal_OBJ.dir == "asfixia") 
+    mostrar_texto_salvarRandal = true;
+else 
+    if (!Randal_OBJ.dir == "asfixia")
+        mostrar_texto_salvarRandal = false;
+        
+            
+
+
 
 </string>
           </argument>
@@ -111,6 +120,13 @@ if (mostrar_texto == true) {
     draw_set_font(dialogo_FNT);
     draw_set_halign(fa_left);
     draw_text(x + 34,y - 64, "Inhalador#(Pulsa Z)");
+}
+
+if (mostrar_texto_salvarRandal == true) {
+    draw_set_color(c_black);
+    draw_set_font(dialogo_FNT);
+    draw_set_halign(fa_left);
+    draw_text(x - 100,y - 24, "Dar#Inhalador#(Pulsa X)");
 }
 </string>
           </argument>
