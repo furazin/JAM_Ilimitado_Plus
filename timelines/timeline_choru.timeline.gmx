@@ -426,7 +426,7 @@ dir = "parado";
     </event>
   </entry>
   <entry>
-    <step>7000</step>
+    <step>6200</step>
     <event>
       <action>
         <libid>1</libid>
@@ -445,7 +445,7 @@ dir = "parado";
           <argument>
             <kind>1</kind>
             <string>/// Parado
-if(Asesino_OBJ.muerto and Oso_OBJ.muerto and !Chulu_OBJ.muerto and !Randal_OBJ.muerto){
+if(Asesino_OBJ.muerto and Oso_OBJ.muerto and !Choru_OBJ.muerto and !Randal_OBJ.muerto){
     room_goto(creditos_ROOM);
 }
 </string>

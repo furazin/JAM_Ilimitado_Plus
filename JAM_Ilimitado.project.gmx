@@ -17,9 +17,7 @@
     <sounds name="Gritos">
       <sound>sound\grito_asesino</sound>
       <sound>sound\grito_chulu</sound>
-      <sound>sound\grito_brad</sound>
       <sound>sound\grito_randal</sound>
-      <sound>sound\grito_beth</sound>
     </sounds>
     <sound>sound\fuego_sound</sound>
     <sound>sound\escopeta</sound>

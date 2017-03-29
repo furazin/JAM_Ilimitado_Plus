@@ -91,10 +91,9 @@
     <instance objName="LlaveInglesa_Suelo_OBJ" x="3840" y="1056" name="inst_B6FA920B" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="Arbol_Delante_OBJ" x="3072" y="992" name="inst_8D433EAF" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="Arbol_Detras_OBJ" x="3360" y="992" name="inst_74B06932" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="Arbol_Delante_OBJ" x="4160" y="992" name="inst_C2134253" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="Arbol_Detras_OBJ" x="2880" y="992" name="inst_B5703546" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="Arbol_Detras_OBJ" x="4256" y="992" name="inst_EEF45AD5" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="Arbol_Detras_OBJ" x="4416" y="992" name="inst_AE4D1244" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="Arbol_Detras_OBJ" x="4352" y="992" name="inst_AE4D1244" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="Arbol_Detras_OBJ" x="4672" y="992" name="inst_17158F12" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="Cocina_OBJ" x="672" y="992" name="inst_1642D740" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="Coche_OBJ" x="1504" y="992" name="inst_592CF7C3" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
@@ -103,7 +102,7 @@
     <instance objName="Choru_OBJ" x="3712" y="992" name="inst_BD500DEF" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="Oso_OBJ" x="3200" y="992" name="inst_0E618CD0" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="Cama_OBJ" x="192" y="1024" name="inst_08284123" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="Asesino_OBJ" x="4288" y="992" name="inst_305817F6" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="Asesino_OBJ" x="4256" y="992" name="inst_305817F6" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="Almacen_OBJ" x="2144" y="992" name="inst_16DDE940" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="Mesa_OBJ" x="2240" y="992" name="inst_F6816F41" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="Hacha_OBJ" x="2272" y="768" name="inst_3A8653DF" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
@@ -128,6 +127,7 @@
     <instance objName="Nube_Chica_Oscura_OBJ" x="3008" y="352" name="inst_84A18487" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="Nube_Chica_Normal_OBJ" x="4096" y="288" name="inst_25068FBA" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="Nube_Mediana_Oscura_OBJ" x="4736" y="288" name="inst_BA5332B4" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="Arbol_Detras_OBJ" x="4128" y="992" name="inst_FBC82E62" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles>
     <tile bgName="" x="448" y="1056" w="16" h="16" xo="0" yo="0" id="10000006" name="inst_5114C7F1" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>

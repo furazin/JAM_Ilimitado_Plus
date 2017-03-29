@@ -90,23 +90,29 @@ switch(dir) {
         break;
     case "muerte":
         sprite_index = Oso_Muerte_SPR;
-        if(image_index &lt; 2) {
-         } else if (image_index &gt; 6) {
+        if (image_index &gt; 5) {
             muerto = true;
             image_speed = 0; // Cuando se acaba la animación de morir la paramos
         }
         else 
-            image_speed = 0.5; // Cambiamos la velocidad cuando estamos cayendo muertos
+           image_speed = 0.5; // Cambiamos la velocidad cuando estamos cayendo muertos
         break;
     case "ataque":
         sprite_index = Oso_Atacar_SPR;
+        if (image_index &gt; 1)
+            image_speed = 0;
         break; 
 
 }
 
 // Cambiar profundidad cuando se acerque a Choru
-if (x &gt; 4544)
+if (x &gt; 4220)
     depth = -y;
+    
+// Cuando matamos a Choru, nos quedamos quietos
+if (Choru_OBJ.estado == "muerto" and Choru_OBJ.image_speed == 0)
+    sprite_index = Oso_Quieto_SPR;
+
 </string>
           </argument>
         </arguments>

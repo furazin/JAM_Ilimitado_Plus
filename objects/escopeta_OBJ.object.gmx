@@ -163,7 +163,7 @@ if (mostrar_texto_disparar == true) {
           <argument>
             <kind>1</kind>
             <string>/// Disparo tras pulsar la tecla X y estar cerca
-if (distance_to_object(Oso_OBJ)&lt;50 and coger = true) {
+if (distance_to_object(Oso_OBJ)&lt;300 and coger = true) {
     Oso_OBJ.estado = estados_Oso.muerto;
     Oso_OBJ.dir = "muerte";
     if(!audio_is_playing(escopeta)) audio_play_sound(escopeta, 10, false);
