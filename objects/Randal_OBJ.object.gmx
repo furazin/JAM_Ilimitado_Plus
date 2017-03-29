@@ -93,6 +93,7 @@ switch(dir) {
         x += caminar_speed;
         break;   
     case "parado":
+        mostrar_texto_asfixia = false;
         sprite_index = Randal_Quieto_SPR;
         break;
     case "muerte":
