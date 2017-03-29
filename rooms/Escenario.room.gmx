@@ -98,7 +98,7 @@
     <instance objName="Cocina_OBJ" x="672" y="992" name="inst_1642D740" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="Coche_OBJ" x="1504" y="992" name="inst_592CF7C3" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="Tender_OBJ" x="1504" y="992" name="inst_7FF91744" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="Arbol_Delante_OBJ" x="4000" y="992" name="inst_61166F0B" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="Arbol_Delante_OBJ" x="3872" y="992" name="inst_61166F0B" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="Choru_OBJ" x="3712" y="992" name="inst_BD500DEF" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="Cama_OBJ" x="192" y="1024" name="inst_08284123" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="Asesino_OBJ" x="4256" y="992" name="inst_305817F6" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>

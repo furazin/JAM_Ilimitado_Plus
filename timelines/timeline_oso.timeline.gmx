@@ -22,6 +22,7 @@
             <string>
     estado = estados_Oso.caminando;
     dir = "derecha";
+    mostrar_texto_grito = true;
 
 </string>
           </argument>

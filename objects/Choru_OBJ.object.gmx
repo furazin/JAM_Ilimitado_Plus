@@ -44,6 +44,7 @@ mostrar_texto = true;
 caminar_speed = 2;
 muerto = false;
 mostrar_texto_cerveza = false;
+mostrar_texto_meando = false;
 
 // Timeline
 timeline_index  = timeline_choru;
@@ -112,6 +113,11 @@ switch(dir) {
         sprite_index = Choru_Meando_SPR;
         break; 
 }
+
+if (dir == "mear")
+    mostrar_texto_meando = true;
+else
+    mostrar_texto_meando = false;
 </string>
           </argument>
         </arguments>
@@ -177,10 +183,17 @@ if(estado == estados_Chulu.caminando and (dir == "derecha" or dir == "izquierda"
             <string>draw_self(); // Overriding
 
 if (mostrar_texto_cerveza) {
-    draw_set_color(c_white);
+    draw_set_color(c_black);
     draw_set_font(dialogo_FNT);
     draw_set_halign(fa_left);
     draw_text_transformed(x + 40, y - 200, "Hostia una#birra", 1.2, 1.2, image_angle);
+}
+
+if (mostrar_texto_meando) {
+    draw_set_color(c_black);
+    draw_set_font(dialogo_FNT);
+    draw_set_halign(fa_left);
+    draw_text_transformed(x + 55, y - 200, "Buuf que#agusto", 1.2, 1.2, image_angle);
 }
 
 </string>

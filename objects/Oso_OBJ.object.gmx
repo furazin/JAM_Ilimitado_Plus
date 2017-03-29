@@ -41,6 +41,7 @@ dialogo = "prueba";
 mostrar_texto = true;
 caminar_speed = 2;
 muerto = false;
+mostrar_texto_grito = false; // Variable para el pequeño dialogo de texto en que sale un grito GROAAAAAAR
 
 // Timeline
 timeline_index  = timeline_oso;
@@ -48,36 +49,6 @@ timeline_position = 0;
 timeline_running = true;
 timeline_loop = false;
 </string>
-          </argument>
-        </arguments>
-      </action>
-    </event>
-    <event eventtype="2" enumb="0">
-      <action>
-        <libid>1</libid>
-        <id>201</id>
-        <kind>0</kind>
-        <userelative>-1</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>1</exetype>
-        <functionname>action_create_object</functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>10</kind>
-            <object>Oso_OBJ</object>
-          </argument>
-          <argument>
-            <kind>0</kind>
-            <string>3168</string>
-          </argument>
-          <argument>
-            <kind>0</kind>
-            <string>960</string>
           </argument>
         </arguments>
       </action>
@@ -136,12 +107,15 @@ switch(dir) {
 }
 
 // Cambiar profundidad cuando se acerque a Choru
-if (x &gt; 4220)
+if (x &gt; 4060)
     depth = -y;
     
 // Cuando matamos a Choru, nos quedamos quietos
 if (Choru_OBJ.estado == "muerto" and Choru_OBJ.image_speed == 0)
     sprite_index = Oso_Quieto_SPR;
+    
+if (Oso_OBJ.muerto)
+    mostrar_texto_grito = false;
 
 </string>
           </argument>
@@ -212,7 +186,40 @@ if(estado == estados_Randal.caminando and (dir == "derecha" or dir == "izquierda
 if(Choru_OBJ.dir == "mear"){
 Choru_OBJ.estado = "muerto";
 Choru_OBJ.dir = "muerte";
+mostrar_texto_grito = false;
 }
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="8" enumb="0">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>draw_self(); // Overriding
+
+if (mostrar_texto_grito) {
+    draw_set_color(c_black); 
+    draw_set_font(dialogo_FNT);
+    draw_set_halign(fa_left);
+    //draw_text(x + 150,y - 200, "Me apetece#una birra");
+    draw_text_transformed(x, y - 300, "GROAAAAAAAAAR#¡¡COMIDA!!", 1.8, 1.8, image_angle);
+}
+
 </string>
           </argument>
         </arguments>
