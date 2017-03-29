@@ -29,6 +29,7 @@
 coger = false; // Variable que controla si se coge o no la escopeta
 
 mostrar_texto = false;
+mostrar_texto_disparar = false;
 
 
 
@@ -97,6 +98,12 @@ if (mostrar_texto == true) {
     draw_set_halign(fa_left);
     draw_text(x + 34,y - 64, "Escopeta#(Pulsa Z)");
 }
+if (mostrar_texto_disparar == true) {
+    draw_set_color(c_black);
+    draw_set_font(dialogo_FNT);
+    draw_set_halign(fa_left);
+    draw_text(x + 34,y - 64, "Disparar#(Pulsa X)");
+}
 </string>
           </argument>
         </arguments>
@@ -123,11 +130,13 @@ if (mostrar_texto == true) {
     coger = false;    
     y = y + 110;    
     mostrar_texto = true;
+    mostrar_texto_disparar = false; 
     audio_play_sound(soltar_objeto, 10, false);
 } else {
     if (distance_to_object(Protagonista_OBJ)&lt;3) { 
         coger = true;
-        mostrar_texto = false;            
+        mostrar_texto = false;  
+        mostrar_texto_disparar = true;          
         audio_play_sound(coger_objeto, 10, false);
     }
 }
