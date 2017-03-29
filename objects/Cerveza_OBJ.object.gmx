@@ -58,8 +58,8 @@ randal = false;
     x = Randal_OBJ.x + 30;
     y = Randal_OBJ.y - 110;
 } if(coger_chulu) {
-    x = Chulu_OBJ.x + 30;
-    y = Chulu_OBJ.y - 110;
+    x = Choru_OBJ.x + 30;
+    y = Choru_OBJ.y - 110;
 }
 
 </string>
@@ -118,15 +118,15 @@ randal = false;
     y = y + 110;    
     mostrar_texto = true;
     audio_play_sound(soltar_objeto, 10, false);
-    Chulu_OBJ.estado = estados_Chulu.meando;
-    Chulu_OBJ.dir = "meando";
+    Choru_OBJ.estado = estados_Chulu.meando;
+    Choru_OBJ.dir = "meando";
 }
 </string>
           </argument>
         </arguments>
       </action>
     </event>
-    <event eventtype="4" ename="Chulu_OBJ">
+    <event eventtype="4" ename="Choru_OBJ">
       <action>
         <libid>1</libid>
         <id>603</id>

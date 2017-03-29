@@ -38,7 +38,8 @@ enum estados_Randal {
 dir = "parado";
 estado = estados_Randal.caminando;
 dialogo = "prueba";
-mostrar_texto_asfixia = false;
+mostrar_texto_asfixia = false; // Dialogo mientra se asfixia
+mostrar_texto_cerveza = false; // Dialogo mientras coge la cerveza del frigo
 caminar_speed = 2;
 muerto = false;
 aerosol = false;
@@ -118,6 +119,12 @@ switch(dir) {
         break; 
 
 }
+
+// Comentario al coger la cerveza
+if (place_meeting(x,y,Nevera_OBJ))
+    mostrar_texto_cerveza = true;
+else
+    mostrar_texto_cerveza = false;
 </string>
           </argument>
         </arguments>
@@ -189,6 +196,14 @@ if (mostrar_texto_asfixia) {
     draw_set_halign(fa_right);
     //draw_text(x + 80,y - 195, "¡Socorro!#¡Me asfixio!");
     draw_text_transformed(x + 90, y - 200, "¡Socorro!#¡Me asfixio!", 1.5, 1.5, image_angle);
+}
+
+if (mostrar_texto_cerveza) {
+    draw_set_color(c_white); 
+    draw_set_font(dialogo_FNT);
+    draw_set_halign(fa_left);
+    //draw_text(x + 150,y - 200, "Me apetece#una birra");
+    draw_text_transformed(x + 100, y - 200, "Me apetece#una birra", 1.2, 1.2, image_angle);
 }
 </string>
           </argument>

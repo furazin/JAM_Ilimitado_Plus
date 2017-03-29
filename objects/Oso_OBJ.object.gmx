@@ -103,6 +103,10 @@ switch(dir) {
         break; 
 
 }
+
+// Cambiar profundidad cuando se acerque a Choru
+if (x &gt; 4544)
+    depth = -y;
 </string>
           </argument>
         </arguments>
@@ -148,7 +152,7 @@ if(estado == estados_Randal.caminando and (dir == "derecha" or dir == "izquierda
         </arguments>
       </action>
     </event>
-    <event eventtype="4" ename="Chulu_OBJ">
+    <event eventtype="4" ename="Choru_OBJ">
       <action>
         <libid>1</libid>
         <id>603</id>
@@ -165,13 +169,13 @@ if(estado == estados_Randal.caminando and (dir == "derecha" or dir == "izquierda
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if(!Chulu_OBJ.muerto and Chulu_OBJ.dir == "mear"){
+            <string>if(!Choru_OBJ.muerto and Choru_OBJ.dir == "mear"){
     estado = estados_Oso.atacar;
     dir = "ataque";
 }
-if(Chulu_OBJ.dir == "mear"){
-Chulu_OBJ.estado = "muerto";
-Chulu_OBJ.dir = "muerte";
+if(Choru_OBJ.dir == "mear"){
+Choru_OBJ.estado = "muerto";
+Choru_OBJ.dir = "muerte";
 }
 </string>
           </argument>

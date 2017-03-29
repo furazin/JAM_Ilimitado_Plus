@@ -87,12 +87,12 @@
       <sprite>sprites\Asesino_Asesinar_SPR</sprite>
       <sprite>sprites\Asesino_Quieto_SPR</sprite>
     </sprites>
-    <sprites name="Chulu">
-      <sprite>sprites\Chulu_Quieto_SPR</sprite>
-      <sprite>sprites\Chulu_Andar_Derecha_SPR</sprite>
-      <sprite>sprites\Chulu_Andar_Izquierda_SPR</sprite>
-      <sprite>sprites\Chulu_Muerte_SPR</sprite>
-      <sprite>sprites\Chulu_Meando_SPR</sprite>
+    <sprites name="Choru">
+      <sprite>sprites\Choru_Quieto_SPR</sprite>
+      <sprite>sprites\Choru_Andar_Derecha_SPR</sprite>
+      <sprite>sprites\Choru_Andar_Izquierda_SPR</sprite>
+      <sprite>sprites\Choru_Muerte_SPR</sprite>
+      <sprite>sprites\Choru_Meando_SPR</sprite>
     </sprites>
     <sprites name="Oso">
       <sprite>sprites\Oso_Quieto_SPR</sprite>
@@ -155,7 +155,7 @@
       <object>objects\Randal_OBJ</object>
       <object>objects\Asesino_OBJ</object>
       <object>objects\Chad_OBJ</object>
-      <object>objects\Chulu_OBJ</object>
+      <object>objects\Choru_OBJ</object>
       <object>objects\Oso_OBJ</object>
     </objects>
     <objects name="Items">
@@ -201,7 +201,7 @@
   <timelines name="timelines">
     <timeline>timelines\timeline_randal</timeline>
     <timeline>timelines\timeline_asesino</timeline>
-    <timeline>timelines\timeline_chulu</timeline>
+    <timeline>timelines\timeline_choru</timeline>
     <timeline>timelines\timeline_oso</timeline>
   </timelines>
   <rooms name="rooms">

@@ -20,7 +20,7 @@
   <width>104</width>
   <height>255</height>
   <frames>
-    <frame index="0">images\Chulu_Meando_SPR_0.png</frame>
-    <frame index="1">images\Chulu_Meando_SPR_1.png</frame>
+    <frame index="0">images\Choru_Meando_SPR_0.png</frame>
+    <frame index="1">images\Choru_Meando_SPR_1.png</frame>
   </frames>
 </sprite>
