@@ -448,6 +448,8 @@ dir = "parado";
 if(Asesino_OBJ.muerto and Oso_OBJ.muerto and !Choru_OBJ.muerto and !Randal_OBJ.muerto){
     room_goto(creditos_ROOM);
 }
+else 
+    room_restart();
 </string>
           </argument>
         </arguments>
