@@ -3,7 +3,7 @@
   <spriteName>Asesino_Andar_Izquierda_SPR</spriteName>
   <solid>0</solid>
   <visible>-1</visible>
-  <depth>0</depth>
+  <depth>-10000</depth>
   <persistent>0</persistent>
   <parentName>&lt;undefined&gt;</parentName>
   <maskName>&lt;undefined&gt;</maskName>
@@ -27,7 +27,6 @@
             <kind>1</kind>
             <string>/// Inicialización
 image_speed = 0.07;
-depth = -y;
 
 enum estados_Asesino {
     parado = Asesino_Parado,

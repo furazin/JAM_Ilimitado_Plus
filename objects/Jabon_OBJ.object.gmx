@@ -3,7 +3,7 @@
   <spriteName>Jabon_SPR</spriteName>
   <solid>0</solid>
   <visible>-1</visible>
-  <depth>-992</depth>
+  <depth>0</depth>
   <persistent>0</persistent>
   <parentName>&lt;undefined&gt;</parentName>
   <maskName>&lt;undefined&gt;</maskName>
@@ -26,11 +26,15 @@
           <argument>
             <kind>1</kind>
             <string>/// Inicializar
-coger = false; // Variable que controla si se coge o no la escopeta
+coger = false; // Variable que controla si se coge o no el jabon
+fregando = false; // Variable que indica que el protagonista esta fregando con el jabon
+cogido = false;
 
-mostrar_texto = true;
+mostrar_texto_fregar = false;
+mostrar_texto_coger = false;
 
-depth = -1000;
+depth = -y;
+
 
 
 
@@ -65,6 +69,69 @@ if (distance_to_object(Randal_OBJ) &lt; 8 and distance_to_object(Casa_OBJ) &lt; 
     Randal_OBJ.dir = "muerte";
 }
 
+// Diálogo de texto
+if (place_meeting(x,y,Protagonista_OBJ) and !coger and !cogido) { // Jabon sobre el fregadero
+    mostrar_texto_fregar = true;
+    mostrar_texto_coger = false;
+}
+else {
+    mostrar_texto_fregar = false;
+    if (cogido) { // Si se ha dejado el jabon en el suelo despues de fregar
+        show_debug_message(Jabon_OBJ.y);
+        show_debug_message(Protagonista_OBJ.y);
+        //Mostrar_texto_coger = false;
+        mostrar_texto_coger = false;
+        if (place_meeting(x,y,Protagonista_OBJ) and Jabon_OBJ.y == Protagonista_OBJ.y) {
+            mostrar_texto_coger = true;
+                
+        }
+        if (place_meeting(x,y,Protagonista_OBJ) and Jabon_OBJ.y &lt; Protagonista_OBJ.y) { // Protagonista sujeta jabon
+            mostrar_texto_coger = false;
+            if (!coger)
+                mostrar_texto_coger = true;
+        }       
+    }
+}   
+
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="8" enumb="0">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>
+draw_self(); // Ya que estamos sobrescribiendo el evento de dibujo
+
+if (mostrar_texto_fregar == true) {
+    draw_set_color(c_white);
+    draw_set_font(dialogo_FNT);
+    draw_set_halign(fa_left);
+    draw_text(x + 34,y - 64, "Usar jabon para#lavar los platos#(Pulsa X)");
+}
+
+if (mostrar_texto_coger == true) {
+    draw_set_color(c_black); 
+    draw_set_font(dialogo_FNT);
+    //draw_set_halign(fa_left);
+    draw_text(x + 24,y - 60, "Jabon#(Pulsa Z)");
+}
+
 </string>
           </argument>
         </arguments>
@@ -90,14 +157,46 @@ if (distance_to_object(Randal_OBJ) &lt; 8 and distance_to_object(Casa_OBJ) &lt; 
             <string>if(coger) {
     coger = false;    
     y = y + 110;    
-    mostrar_texto = true;
+    //mostrar_texto_ = true;
     audio_play_sound(soltar_objeto, 10, false);
-} else if(y &gt; Protagonista_OBJ.y - 50){
+} else 
     if (distance_to_object(Protagonista_OBJ)&lt;3) { 
         coger = true;
-        mostrar_texto = false;            
+        //mostrar_texto = false;            
         audio_play_sound(coger_objeto, 10, false);
     }
+
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="9" enumb="88">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>if (place_meeting(x,y,Protagonista_OBJ) and Jabon_OBJ.y &lt; Protagonista_OBJ.y) {
+    Protagonista_OBJ.estado =  Protagonista_OBJ.estados_jugador.fregando;
+    Protagonista_OBJ.dir = "fregando";
+    Protagonista_OBJ.coger = false;
+    //Protagonista_OBJ.mostrar_texto = false;
+    audio_play_sound(coger_objeto, 10, false);
+    Jabon_OBJ.depth = -10000;
+    cogido = true; // Variable para controlar cuando el protagonista usa el jabon
+    Protagonista_OBJ.x = 920; // Para arreglar bug del texto con el sprite
 }
 </string>
           </argument>

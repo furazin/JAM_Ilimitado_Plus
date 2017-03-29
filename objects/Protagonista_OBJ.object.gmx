@@ -369,8 +369,12 @@ if(estado == estados_jugador.caminando and (dir == "derecha" or dir == "izquierd
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>// Cerrar juego
-if (keyboard_check(vk_escape)) game_end();
+            <string>/// Volver al menú principal
+if (keyboard_check(vk_escape)) {
+    room_goto(Menu_Inicial);
+    audio_stop_sound(credits);
+}
+
 </string>
           </argument>
         </arguments>
@@ -393,13 +397,14 @@ if (keyboard_check(vk_escape)) game_end();
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if(distance_to_object(Jabon_OBJ) &lt; 8 and Jabon_OBJ.y &lt; Protagonista_OBJ.y){
-    estado = estados_jugador.fregando;
-    dir = "fregando";
-        coger = true;
-        mostrar_texto = false;            
-        audio_play_sound(coger_objeto, 10, false);
-}
+            <string>//if(distance_to_object(Jabon_OBJ) &lt; 8 and Jabon_OBJ.y &lt; Protagonista_OBJ.y){
+  //  estado = estados_jugador.fregando;
+    //dir = "fregando";
+      //  coger = true;
+        //mostrar_texto = false;            
+        //audio_play_sound(coger_objeto, 10, false);
+        //Jabon_OBJ.depth = -10000;
+//}
 </string>
           </argument>
         </arguments>
