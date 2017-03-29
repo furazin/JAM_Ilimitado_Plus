@@ -64,7 +64,7 @@ depth = -y;
     x = Protagonista_OBJ.x + 30;
     y = Protagonista_OBJ.y - 110;
 } else
-if (distance_to_object(Randal_OBJ) &lt; 8 and distance_to_object(Casa_OBJ) &lt; 8 and y &gt; Protagonista_OBJ.y - 50) {
+if (distance_to_object(Randal_OBJ) &lt; 8 and Jabon_OBJ.x &lt; 1440 and y &gt; Protagonista_OBJ.y - 50) {
     Randal_OBJ.estado = estados_Randal.muerto;
     Randal_OBJ.dir = "muerte";
 }
