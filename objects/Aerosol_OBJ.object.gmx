@@ -70,12 +70,17 @@ if (distance_to_object(Randal_OBJ) &lt; 8 and distance_to_object(Casa_OBJ) &lt; 
 }
 
 // Texto Hover
-//if (place_meeting(x,y,Protagonista_OBJ) and !coger) {
-  //  mostrar_texto = true;
-//}
-//else {
- //   mostrar_texto = false;
-//}
+if (place_meeting(x,y,Protagonista_OBJ) and !coger) {
+    show_debug_message(Aerosol_OBJ.y);
+    show_debug_message(Protagonista_OBJ.y);
+    mostrar_texto = true;
+    if (Aerosol_OBJ.y &lt; Protagonista_OBJ.y)
+        mostrar_texto = false;
+    
+}
+else {
+    mostrar_texto = false;
+}
 
 </string>
           </argument>
