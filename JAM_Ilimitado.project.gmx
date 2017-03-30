@@ -189,11 +189,13 @@
       <object>objects\Mesa_OBJ</object>
       <object>objects\Cama_OBJ</object>
     </objects>
-    <object>objects\creditos_OBJ</object>
     <objects name="Menu_Inicio">
       <object>objects\flecha_OBJ</object>
       <object>objects\Titulo_OBJ</object>
       <object>objects\musica_titulo</object>
+    </objects>
+    <objects name="Creditos">
+      <object>objects\creditos_OBJ</object>
     </objects>
   </objects>
   <timelines name="timelines">
