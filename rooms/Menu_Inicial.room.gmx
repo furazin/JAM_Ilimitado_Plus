@@ -60,6 +60,7 @@
     <instance objName="Asesino_OBJ" x="1883" y="1003" name="inst_7526AB5C" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="Suelo_OBJ" x="0" y="992" name="inst_EA092E2E" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="Suelo_OBJ" x="128" y="992" name="inst_4AFE7517" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="Subtitulo_OBJ" x="615" y="308" name="inst_292385C2" locked="0" code="" scaleX="1.26666665077209" scaleY="1.21333336830139" colour="4294967295" rotation="0"/>
   </instances>
   <tiles/>
   <PhysicsWorld>0</PhysicsWorld>

@@ -23,6 +23,10 @@
     <sound>sound\escopeta</sound>
     <sound>sound\music</sound>
     <sound>sound\credits</sound>
+    <sounds name="Menu">
+      <sound>sound\Menu_Arriba</sound>
+      <sound>sound\Menu_Abajo</sound>
+    </sounds>
   </sounds>
   <sprites name="sprites">
     <sprite>sprites\bloque_azul_SPR</sprite>
@@ -102,6 +106,7 @@
     <sprites name="Menu_ Inicio">
       <sprite>sprites\flecha</sprite>
       <sprite>sprites\Titulo_Juego_SPR</sprite>
+      <sprite>sprites\Subtitulo</sprite>
     </sprites>
   </sprites>
   <backgrounds name="background">
@@ -192,7 +197,7 @@
     <objects name="Menu_Inicio">
       <object>objects\flecha_OBJ</object>
       <object>objects\Titulo_OBJ</object>
-      <object>objects\musica_titulo</object>
+      <object>objects\Subtitulo_OBJ</object>
     </objects>
     <objects name="Creditos">
       <object>objects\creditos_OBJ</object>
