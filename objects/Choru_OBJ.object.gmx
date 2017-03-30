@@ -182,7 +182,7 @@ if(estado == estados_Chulu.caminando and (dir == "derecha" or dir == "izquierda"
             <kind>1</kind>
             <string>draw_self(); // Overriding
 
-if (mostrar_texto_cerveza) {
+if (mostrar_texto_cerveza and place_meeting(x,y,Cerveza_OBJ)) {
     draw_set_color(c_black);
     draw_set_font(dialogo_FNT);
     draw_set_halign(fa_left);
