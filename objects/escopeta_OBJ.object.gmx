@@ -176,54 +176,15 @@ if (mostrar_texto_disparar == true) {
 if (distance_to_object(Oso_OBJ)&lt;300 and coger and disparar_oso) {
     Oso_OBJ.estado = estados_Oso.muerto;
     Oso_OBJ.dir = "muerte";
-    if(!audio_is_playing(escopeta)) audio_play_sound(escopeta, 10, false);
+    
 }
-if (distance_to_object(Asesino_OBJ)&lt;300 and coger = true) {
-    Asesino_OBJ.estado = estados_Asesino.muerto;
-    Asesino_OBJ.dir = "muerte";
-    if(!audio_is_playing(escopeta)) audio_play_sound(escopeta, 10, false);
+if(coger and !audio_is_playing(escopeta) and distance_to_object(Protagonista_OBJ) &lt; 8) {
+    audio_play_sound(escopeta, 10, false);
+    effect_create_above(ef_explosion, x + 60, y, 1, c_gray);    
 }
+
+
 </string>
-          </argument>
-        </arguments>
-      </action>
-      <action>
-        <libid>1</libid>
-        <id>532</id>
-        <kind>0</kind>
-        <userelative>-1</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>1</exetype>
-        <functionname>action_effect</functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>-1</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>4</kind>
-            <string>0</string>
-          </argument>
-          <argument>
-            <kind>0</kind>
-            <string>70</string>
-          </argument>
-          <argument>
-            <kind>0</kind>
-            <string>0</string>
-          </argument>
-          <argument>
-            <kind>4</kind>
-            <string>1</string>
-          </argument>
-          <argument>
-            <kind>13</kind>
-            <string>8421504</string>
-          </argument>
-          <argument>
-            <kind>4</kind>
-            <string>0</string>
           </argument>
         </arguments>
       </action>

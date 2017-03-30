@@ -63,10 +63,15 @@ depth = -y;
             <string>if(coger) {
     x = Protagonista_OBJ.x + 50;
     y = Protagonista_OBJ.y - 110;
-} else
-if (distance_to_object(Randal_OBJ) &lt; 8 and Jabon_OBJ.x &lt; 1440 and y &gt; Protagonista_OBJ.y - 50) {
-    Randal_OBJ.estado = estados_Randal.muerto;
-    Randal_OBJ.dir = "muerte";
+} else {
+    if (place_meeting(x,y,Randal_OBJ) and Jabon_OBJ.x &lt; 1440 and y &gt; Protagonista_OBJ.y - 50) { // Muerte de Randal(dentro de la casa)
+        Randal_OBJ.estado = estados_Randal.muerto;
+        Randal_OBJ.dir = "muerte";
+    }
+    if (place_meeting(x,y,Asesino_OBJ) and Jabon_OBJ.x &gt; 1440 and y &gt; Protagonista_OBJ.y - 50) {
+        Asesino_OBJ.estado = estados_Asesino.muerto;
+        Asesino_OBJ.dir = "muerte";
+    }
 }
 
 // Diálogo de texto
@@ -77,8 +82,6 @@ if (place_meeting(x,y,Protagonista_OBJ) and !coger and !cogido) { // Jabon sobre
 else {
     mostrar_texto_fregar = false;
     if (cogido) { // Si se ha dejado el jabon en el suelo despues de fregar
-        show_debug_message(Jabon_OBJ.y);
-        show_debug_message(Protagonista_OBJ.y);
         //Mostrar_texto_coger = false;
         mostrar_texto_coger = false;
         if (place_meeting(x,y,Protagonista_OBJ) and Jabon_OBJ.y == Protagonista_OBJ.y) {
