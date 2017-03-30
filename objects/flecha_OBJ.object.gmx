@@ -30,6 +30,8 @@ menu[1] = "Salir";
 
 espacio = 64;
 Posicion_Inicial = 0;
+
+
 </string>
           </argument>
         </arguments>
@@ -92,6 +94,8 @@ var push;
 push = max(keyboard_check_pressed(vk_enter), 0);
 if (push == 1) // Si se pulsa Enter
     menu_SCR();
+    
+
 </string>
           </argument>
         </arguments>

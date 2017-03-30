@@ -338,6 +338,8 @@ if(estado == estados_jugador.caminando and (dir == "derecha" or dir == "izquierd
     }
     }
 }
+
+
 </string>
           </argument>
         </arguments>

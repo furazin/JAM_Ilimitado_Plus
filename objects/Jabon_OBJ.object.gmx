@@ -189,6 +189,8 @@ if (mostrar_texto_coger == true) {
           <argument>
             <kind>1</kind>
             <string>if (place_meeting(x,y,Protagonista_OBJ) and Jabon_OBJ.y &lt; Protagonista_OBJ.y) {
+    audio_play_sound(lavar_platos, 10, false);
+
     Protagonista_OBJ.estado =  Protagonista_OBJ.estados_jugador.fregando;
     Protagonista_OBJ.dir = "fregando";
     Protagonista_OBJ.coger = false;
